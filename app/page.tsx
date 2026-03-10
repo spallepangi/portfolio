@@ -1,0 +1,26 @@
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Projects from '../components/Projects';
+import Experience from '../components/Experience';
+import Skills from '../components/Skills';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+      <main className="pt-24 pb-16 space-y-16 sm:space-y-20 lg:space-y-24">
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Skills />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+

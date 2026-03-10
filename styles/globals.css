@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f5f5f7;
+  --foreground: #0b0b10;
+  --muted: #6b7280;
+  --border: rgba(15, 23, 42, 0.08);
+  --accent: #2563eb;
+}
+
+.dark {
+  --background: #020817;
+  --foreground: #e5e7eb;
+  --muted: #9ca3af;
+  --border: rgba(148, 163, 184, 0.35);
+  --accent: #38bdf8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--foreground);
+  background: radial-gradient(circle at top, rgba(148, 163, 184, 0.18), transparent 55%),
+    radial-gradient(circle at bottom, rgba(148, 163, 184, 0.18), transparent 55%),
+    var(--background);
+}
+
+::selection {
+  background-color: rgba(56, 189, 248, 0.35);
+  color: #0f172a;
+}
+
+.glass-panel {
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  background-color: color-mix(in srgb, white 70%, transparent);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.18);
+}
+
+.dark .glass-panel {
+  background-color: color-mix(in srgb, rgb(15 23 42) 60%, transparent);
+}
+
+.section {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.section-inner {
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .section-inner {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-inner {
+    padding: 2.5rem;
+  }
+}
+
+.section-inner {
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  background-color: color-mix(in srgb, white 70%, transparent);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.18);
+}
+
+.dark .section-inner {
+  background-color: color-mix(in srgb, rgb(15 23 42) 60%, transparent);
+}
+
+.section-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 640px) {
+  .section-heading {
+    font-size: 1.875rem;
+  }
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  background-color: color-mix(in srgb, var(--background) 80%, transparent);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  background-color: color-mix(in srgb, var(--background) 80%, transparent);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.chip:hover {
+  border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+  color: var(--foreground);
+}
+
+.card {
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  background-color: color-mix(in srgb, white 70%, transparent);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.18);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+.dark .card {
+  background-color: color-mix(in srgb, rgb(15 23 42) 60%, transparent);
+}
+
+.card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.18);
+}
+
+.link-underline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.15rem;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, rgba(148, 163, 184, 0.4), rgba(56, 189, 248, 0.8));
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 200ms ease-out;
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
