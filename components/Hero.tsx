@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -28,7 +27,7 @@ export default function Hero() {
             <h1 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
               <span className="block">Santhosh Pallepangi</span>
               <span className="block mt-2 text-lg font-normal text-muted sm:text-xl">
-                Senior Data Scientist · ML Engineer · GenAI
+                Data Scientist · GenAI
               </span>
             </h1>
             <p className="max-w-xl text-balance text-sm leading-relaxed text-muted sm:text-base">
@@ -90,12 +89,11 @@ export default function Hero() {
         >
           <div className="glass-panel relative mx-auto flex max-w-xs flex-col items-center rounded-3xl p-6 sm:max-w-sm sm:p-8">
             <div className="relative mb-5 h-28 w-28 overflow-hidden rounded-full border border-border-line/80 bg-slate-200 shadow-subtle sm:h-32 sm:w-32">
-              <Image
-                src="/headshot2.jpeg"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/headshot2.jpeg`}
                 alt="Santhosh Pallepangi"
-                fill
-                sizes="128px"
-                className="object-cover brightness-[0.97] contrast-[1.05]"
+                className="h-full w-full object-cover object-center brightness-[0.97] contrast-[1.05]"
               />
             </div>
             <div className="space-y-2 text-center">
