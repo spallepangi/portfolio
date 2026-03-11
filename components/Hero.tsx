@@ -93,7 +93,7 @@ export default function Hero() {
               <img
                 src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/headshot2.jpeg`}
                 alt="Santhosh Pallepangi"
-                className="h-full w-full object-cover object-center brightness-[0.97] contrast-[1.05]"
+                className="h-full w-full object-cover object-center brightness-[0.92] contrast-[1.08]"
               />
             </div>
             <div className="space-y-2 text-center">
