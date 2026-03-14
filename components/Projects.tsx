@@ -93,7 +93,7 @@ export default function Projects() {
                   )}
                 </div>
                 <span className="text-[11px] text-muted">
-                  {index === 0 ? 'RAG / Policy' : 'Medical AI'}
+                  {index === 0 ? 'Insurance · RAG' : 'ML · HR Analytics'}
                 </span>
               </div>
             </motion.article>

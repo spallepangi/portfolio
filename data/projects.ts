@@ -9,21 +9,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'AI DOC Policy Chatbot',
-    description: 'RAG chatbot using Gemini Pro to answer policy-related queries from Missouri Department of Corrections documents.',
+    title: 'Insurance Copilot',
+    description: 'AI-powered copilot for insurance-related queries using RAG and LLMs.',
     summary:
-      'Built RAG chatbot integrating PyMuPDF parsing, FAISS vector store, and a Streamlit UI with source citations.',
-    tech: ['Gemini Pro', 'PyMuPDF', 'FAISS', 'Streamlit', 'LangChain'],
-    github: 'https://github.com/',
-    demo: 'https://example.com/'
+      'Built a retrieval-augmented generation system to answer insurance policy and product questions with source-grounded responses.',
+    tech: ['Python', 'LangChain', 'RAG', 'LLMs', 'Streamlit'],
+    github: 'https://github.com/spallepangi/insurance-copilot'
   },
   {
-    title: 'CardioCopilot',
-    description: 'Clinical Q&A assistant leveraging Meditron-7B for domain-specific medical insights grounded in the Oxford Handbook of Cardiology.',
+    title: 'Employee Attrition ML System',
+    description: 'End-to-end ML system for predicting employee attrition and retention risk.',
     summary:
-      'Developed a clinical Q&A assistant with PDF-based semantic retrieval, deployed via Streamlit for real-time domain-specific medical insights.',
-    tech: ['Meditron-7B', 'HuggingFace', 'FAISS', 'Streamlit'],
-    github: 'https://github.com/',
-    demo: 'https://example.com/'
+      'Developed predictive models and pipeline for workforce attrition, enabling proactive HR interventions and retention strategies.',
+    tech: ['Python', 'Scikit-Learn', 'XGBoost', 'Pandas', 'ML Pipeline'],
+    github: 'https://github.com/spallepangi/employee-attrition-ml-system'
   }
 ];
