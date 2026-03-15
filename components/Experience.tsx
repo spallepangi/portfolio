@@ -43,7 +43,6 @@ export default function Experience() {
                   </div>
                   <div className="text-right text-[11px] text-muted">
                     <p>{item.period}</p>
-                    {item.location && <p>{item.location}</p>}
                   </div>
                 </div>
                 <ul className="mt-1 list-disc space-y-1.5 pl-5 text-xs text-muted">

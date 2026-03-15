@@ -80,9 +80,7 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-2 text-[11px] text-muted">
             <span className="pill">6+ years experience</span>
-            <span className="pill">State of Missouri</span>
             <span className="pill">MS Data Science, Mizzou</span>
-            <span className="pill">Columbia, MO</span>
             <span className="pill">GenAI &amp; RAG</span>
           </div>
         </motion.div>

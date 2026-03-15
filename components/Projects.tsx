@@ -171,6 +171,30 @@ export default function Projects() {
                             </p>
                           </div>
                         )}
+
+                        {project.features && project.features.length > 0 && (
+                          <div className="space-y-1.5">
+                            <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-muted">
+                              Key features
+                            </p>
+                            <ul className="list-disc space-y-1 pl-4 text-xs leading-relaxed text-muted sm:text-[13px]">
+                              {project.features.map((feature, i) => (
+                                <li key={i}>{feature}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        {project.outcome && (
+                          <div className="space-y-1.5">
+                            <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-muted">
+                              Outcome
+                            </p>
+                            <p className="text-xs leading-relaxed text-muted sm:text-[13px]">
+                              {project.outcome}
+                            </p>
+                          </div>
+                        )}
                       </div>
                     </motion.div>
                   )}

@@ -22,7 +22,7 @@ export default function About() {
             Data science, ML systems, and GenAI in production.
           </h2>
           <p className="text-xs text-muted">
-            6+ years · State of Missouri · MS Data Science, University of Missouri · Columbia, MO
+            6+ years · MS Data Science, University of Missouri
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="grid gap-4 text-sm">
+            <div id="education" className="grid gap-4 text-sm scroll-mt-24">
               <div>
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                   Education

@@ -3,6 +3,7 @@ name: Build and deploy portfolio
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -31,13 +32,22 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
 
       - name: Fetch repo metadata
         run: npm run fetch-repos
 
       - name: Build
         run: npm run build
+
+      - name: Verify output
+        run: |
+          if [ ! -d out ] || [ -z "$(ls -A out 2>/dev/null)" ]; then
+            echo "::error::Build did not produce the 'out' folder. Check the build step."
+            exit 1
+          fi
+          echo "Build output: $(ls -la out)"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

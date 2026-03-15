@@ -61,15 +61,23 @@ The project is set up for **static export** and deploys to GitHub Pages via **Gi
    git push -u origin main
    ```
 
-2. **Enable GitHub Pages with Actions:**
-   - In the repo go to **Settings → Pages**
-   - Under **Build and deployment**, set **Source** to **GitHub Actions**
+2. **Enable GitHub Pages with Actions (required for the site to update):**
+   - In the **portfolio** repo go to **Settings → Pages**
+   - Under **Build and deployment**, set **Source** to **GitHub Actions** (not "Deploy from a branch")
+   - Save. The site is built and deployed only when this is set.
 
-3. **Trigger deployment:** Each push to `main` runs the workflow and deploys the site. You can also run it manually from **Actions → Deploy to GitHub Pages → Run workflow**.
+3. **Trigger deployment:** Each push to `main` runs the workflow and deploys the site. You can also run it manually: **Actions** tab → **Build and deploy portfolio** → **Run workflow** → **Run workflow**.
 
 **Your site will be at:**  
 `https://YOUR_USERNAME.github.io/portfolio/`  
 (Replace `YOUR_USERNAME` and `portfolio` with your GitHub username and repo name.)
+
+**If GitHub Pages is not updating when you push:**
+
+- **Source must be GitHub Actions.** In **Settings → Pages**, if "Source" is "Deploy from a branch", the site will not use your workflow. Change it to **GitHub Actions** so every push to `main` (or manual run) builds from the portfolio repo and deploys.
+- **First-time deploy:** You may need to approve the `github-pages` environment: **Settings → Environments → github-pages** → Approve if prompted.
+- **Check the workflow:** Go to **Actions** → **Build and deploy portfolio**. If the latest run failed, open it and fix the error (e.g. missing `package-lock.json` — run `npm install` locally and commit `package-lock.json`).
+- **Manual run:** **Actions** → **Build and deploy portfolio** → **Run workflow** → **Run workflow**. The site will rebuild from the current `main` branch.
 
 **Auto-updating from your project repos:**  
 On every build (e.g. each push to `main`), the workflow runs `npm run fetch-repos`, which pulls the latest metadata (description, last pushed date) from the GitHub repos listed in `scripts/fetch-repo-meta.js`. Project cards then show the repo description and an "Updated X ago" label so the portfolio stays in sync with your repos.

@@ -6,9 +6,9 @@ import { Github, Linkedin, Mail, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 const sections = [
+  { id: 'hero', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
-  { id: 'experience', label: 'Experience' },
   { id: 'skills', label: 'Skills' },
   { id: 'contact', label: 'Contact' }
 ];
@@ -26,12 +26,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-border-line/60 bg-background/70 backdrop-blur-xl">
       <nav className="section flex h-16 items-center justify-between gap-4">
-        <div className="hidden flex-1 items-center gap-6 md:flex">
+        <div className="flex flex-1 flex-wrap items-center justify-center gap-3 overflow-x-auto py-1 sm:gap-4 md:justify-center md:gap-6">
           {sections.map((section) => (
             <a
               key={section.id}
               href={`#${section.id}`}
-              className="text-xs font-medium text-muted transition-colors hover:text-foreground"
+              className="shrink-0 text-xs font-medium text-muted transition-colors hover:text-foreground"
             >
               {section.label}
             </a>
