@@ -1,3 +1,5 @@
+# Builds the portfolio from this repo and deploys to GitHub Pages.
+# Required: In repo Settings → Pages, set Source to "GitHub Actions" (not "Deploy from a branch").
 name: Build and deploy portfolio
 
 on:
@@ -32,11 +34,11 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+        run: npm ci
 
       - name: Fetch repo metadata
         run: npm run fetch-repos
+        continue-on-error: true
 
       - name: Build
         run: npm run build
@@ -47,7 +49,7 @@ jobs:
             echo "::error::Build did not produce the 'out' folder. Check the build step."
             exit 1
           fi
-          echo "Build output: $(ls -la out)"
+          echo "Build output: $(ls -la out | head -20)"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
