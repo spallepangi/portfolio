@@ -43,8 +43,8 @@ export default function Projects() {
       className="section"
       aria-label="Projects"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
+        <motion.div
+        initial={{ opacity: 1, y: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -99,7 +99,7 @@ export default function Projects() {
               <motion.article
                 key={project.title}
                 layout
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
