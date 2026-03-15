@@ -58,14 +58,32 @@ export default function Projects() {
             </h2>
           </div>
           <p className="max-w-sm text-xs text-muted">
-            RAG systems and domain-specific AI assistants. All code on{' '}
+            This site:{' '}
             <a
-              href="https://github.com/spallepangi?tab=repositories"
+              href="https://github.com/spallepangi/portfolio"
               target="_blank"
               rel="noreferrer"
               className="link-underline text-foreground hover:no-underline"
             >
-              GitHub
+              Portfolio
+            </a>
+            . Projects:{' '}
+            <a
+              href="https://github.com/spallepangi/insurance-copilot"
+              target="_blank"
+              rel="noreferrer"
+              className="link-underline text-foreground hover:no-underline"
+            >
+              insurance-copilot
+            </a>
+            ,{' '}
+            <a
+              href="https://github.com/spallepangi/employee-attrition-ml-system"
+              target="_blank"
+              rel="noreferrer"
+              className="link-underline text-foreground hover:no-underline"
+            >
+              employee-attrition-ml-system
             </a>
             .
           </p>

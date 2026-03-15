@@ -10,6 +10,15 @@ export default function Footer() {
         </p>
         <p className="flex flex-wrap items-center justify-center gap-3">
           <Link
+            href="https://github.com/spallepangi/portfolio"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-foreground transition-colors"
+          >
+            Portfolio
+          </Link>
+          <span aria-hidden>·</span>
+          <Link
             href="https://github.com/spallepangi"
             target="_blank"
             rel="noreferrer"
