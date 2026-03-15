@@ -1,0 +1,14 @@
+{
+  "insurance-copilot": {
+    "description": "Insurance policy RAG: hybrid retrieval (vector + BM25), reranking, FastAPI + Streamlit",
+    "pushed_at": "2026-03-15T02:12:16Z",
+    "stargazers_count": 0,
+    "updated_at": "2026-03-15T02:12:19Z"
+  },
+  "employee-attrition-ml-system": {
+    "description": null,
+    "pushed_at": "2026-03-11T06:09:17Z",
+    "stargazers_count": 0,
+    "updated_at": "2026-03-11T06:09:20Z"
+  }
+}

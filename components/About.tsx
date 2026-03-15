@@ -21,6 +21,9 @@ export default function About() {
           <h2 className="section-heading">
             Data science, ML systems, and GenAI in production.
           </h2>
+          <p className="text-xs text-muted">
+            6+ years · State of Missouri · MS Data Science, University of Missouri · Columbia, MO
+          </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-[1.6fr_1.2fr]">

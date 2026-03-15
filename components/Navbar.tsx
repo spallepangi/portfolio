@@ -61,15 +61,19 @@ export default function Navbar() {
           </button>
           <div className="hidden items-center gap-1.5 sm:flex">
             <Link
-              href="https://github.com/"
+              href="https://github.com/spallepangi"
               target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
               className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border-line/80 text-muted transition hover:border-accent hover:text-foreground"
             >
               <Github className="h-3.5 w-3.5" />
             </Link>
             <Link
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/santhoshpallepangi/"
               target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
               className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border-line/80 text-muted transition hover:border-accent hover:text-foreground"
             >
               <Linkedin className="h-3.5 w-3.5" />

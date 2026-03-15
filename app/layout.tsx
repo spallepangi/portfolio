@@ -18,12 +18,12 @@ const jetbrainsMono = JetBrainsMono({
 export const metadata: Metadata = {
   title: 'Santhosh Pallepangi | Senior Data Scientist & ML Engineer',
   description:
-    'Santhosh Pallepangi is a Senior Data Scientist and ML Engineer specializing in machine learning systems, predictive analytics, and generative AI applications.',
+    'Santhosh Pallepangi — Data Scientist at State of Missouri · 6+ years experience · MS Data Science, University of Missouri · Columbia, MO. ML systems, GenAI, RAG, predictive analytics. GitHub: spallepangi · LinkedIn: santhoshpallepangi.',
   metadataBase: new URL('https://example.com'),
   openGraph: {
     title: 'Santhosh Pallepangi | Senior Data Scientist & ML Engineer',
     description:
-      'Machine learning, generative AI, and data science portfolio showcasing real-world systems and impact.',
+      'Data Scientist at State of Missouri · 6+ years · MS Data Science (Mizzou) · Columbia, MO. Machine learning, GenAI, RAG, predictive analytics. GitHub & LinkedIn in portfolio.',
     url: 'https://example.com',
     siteName: 'Santhosh Pallepangi • Data Science & ML',
     locale: 'en_US',

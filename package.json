@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "fetch-repos": "node scripts/fetch-repo-meta.js",
+    "build": "npm run fetch-repos && next build",
     "start": "next start",
     "lint": "next lint",
     "export": "next export"

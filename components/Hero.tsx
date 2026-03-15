@@ -52,15 +52,19 @@ export default function Hero() {
             </Link>
             <div className="flex items-center gap-1.5">
               <Link
-                href="https://github.com/"
+                href="https://github.com/spallepangi"
                 target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub profile"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border-line/80 bg-background/80 text-muted transition hover:border-accent hover:text-foreground"
               >
                 <Github className="h-4 w-4" />
               </Link>
               <Link
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/santhoshpallepangi/"
                 target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn profile"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border-line/80 bg-background/80 text-muted transition hover:border-accent hover:text-foreground"
               >
                 <Linkedin className="h-4 w-4" />
@@ -75,9 +79,11 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-wrap gap-2 text-[11px] text-muted">
-            <span className="pill">6+ years in applied ML</span>
-            <span className="pill">GenAI &amp; RAG Systems</span>
-            <span className="pill">End-to-end ML pipelines</span>
+            <span className="pill">6+ years experience</span>
+            <span className="pill">State of Missouri</span>
+            <span className="pill">MS Data Science, Mizzou</span>
+            <span className="pill">Columbia, MO</span>
+            <span className="pill">GenAI &amp; RAG</span>
           </div>
         </motion.div>
 

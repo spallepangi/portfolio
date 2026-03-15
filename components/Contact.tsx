@@ -40,7 +40,7 @@ export default function Contact() {
             <p className="flex items-center gap-2 text-muted">
               <Linkedin className="h-4 w-4" />
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/santhoshpallepangi/"
                 target="_blank"
                 rel="noreferrer"
                 className="link-underline"
@@ -51,7 +51,7 @@ export default function Contact() {
             <p className="flex items-center gap-2 text-muted">
               <Github className="h-4 w-4" />
               <a
-                href="https://github.com/"
+                href="https://github.com/spallepangi"
                 target="_blank"
                 rel="noreferrer"
                 className="link-underline"
