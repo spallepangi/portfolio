@@ -27,6 +27,12 @@ export const projects: Project[] = [
       'FastAPI backend + Streamlit UI; ready to plug in different LLM providers'
     ],
     outcome: 'Enables quick, auditable answers from long policy docs with minimal manual search.',
+    projectMetrics: [
+      'retrieval_recall@5 improved from ~0.125 → 0.23',
+      'retrieval_precision@5 improved from ~0.025 → 0.056',
+      '100-query evaluation; mean latency ~12s/query',
+      'Full evaluation pipeline with recall@5, precision@5, latency, cost, and RAGAS (faithfulness, answer relevancy) support'
+    ],
     tech: ['Python', 'LangChain', 'RAG', 'LLMs', 'Streamlit', 'FastAPI'],
     github: 'https://github.com/spallepangi/insurance-copilot'
   },
@@ -44,6 +50,12 @@ export const projects: Project[] = [
       'Structured for reuse: config-driven so new cohorts or attributes are easy to add'
     ],
     outcome: 'Delivers a reusable ML pipeline and risk scores to support retention and planning.',
+    projectMetrics: [
+      'Stratified 80/20 split with ROC-AUC–driven model selection',
+      'Cross-validated Logistic Regression, Random Forest, and XGBoost (5-fold CV)',
+      'Best model tracked via MLflow; confusion matrix, ROC, and PR curves exported',
+      'SHAP-based explainability (global + local drivers) for attrition risk'
+    ],
     tech: ['Python', 'Scikit-Learn', 'XGBoost', 'Pandas', 'ML Pipeline'],
     github: 'https://github.com/spallepangi/employee-attrition-ml-system'
   },
