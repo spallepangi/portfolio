@@ -5,6 +5,8 @@ export type Project = {
   why?: string;
   features?: string[];
   outcome?: string;
+  /** Model/project metrics from README or docs (shown instead of repo metrics when set) */
+  projectMetrics?: string[];
   tech: string[];
   github?: string;
   demo?: string;
@@ -44,5 +46,30 @@ export const projects: Project[] = [
     outcome: 'Delivers a reusable ML pipeline and risk scores to support retention and planning.',
     tech: ['Python', 'Scikit-Learn', 'XGBoost', 'Pandas', 'ML Pipeline'],
     github: 'https://github.com/spallepangi/employee-attrition-ml-system'
+  },
+  {
+    title: 'Customer Churn Prediction',
+    description: 'End-to-end ML solution for predicting customer churn in SaaS subscription services.',
+    summary:
+      'Built a production-ready churn prediction pipeline with validation, preprocessing, feature engineering (20+ features), and multiple algorithms (XGBoost, RF, LR, SVM). Handles class imbalance via class weights and threshold tuning; includes SHAP interpretability, business impact analysis, and a Streamlit dashboard.',
+    why:
+      'Identifying at-risk customers early enables proactive retention and better ROI. This project delivers a full pipeline from raw subscription data to risk scoring and retention recommendations, with metrics and reports aligned to business outcomes.',
+    features: [
+      'End-to-end pipeline: validation → preprocessing → feature engineering → stratified train/validation → model training → threshold tuning → evaluation → artifacts',
+      '7 algorithms with hyperparameter tuning; class imbalance handled via class weights, SMOTE, and threshold tuning',
+      'SHAP interpretability, ROC/PR curves, calibration plots, and business metrics (cost of churn, retention ROI, lift)',
+      'Streamlit dashboard for EDA, model results, evaluation, and monitoring; model persistence and drift tracking'
+    ],
+    outcome: 'Enables data-driven retention targeting with quantified model and business impact.',
+    projectMetrics: [
+      'ROC-AUC 0.85+',
+      'PR-AUC 0.70+',
+      'Accuracy 82%+',
+      'Precision 78%+',
+      'Recall 75%+',
+      'F1-Score 76%+'
+    ],
+    tech: ['Python', 'Scikit-Learn', 'XGBoost', 'SHAP', 'Pandas', 'Streamlit', 'Joblib'],
+    github: 'https://github.com/spallepangi/customer-churn'
   }
 ];

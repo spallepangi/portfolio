@@ -85,6 +85,15 @@ export default function Projects() {
             >
               employee-attrition-ml-system
             </a>
+            ,{' '}
+            <a
+              href="https://github.com/spallepangi/customer-churn"
+              target="_blank"
+              rel="noreferrer"
+              className="link-underline text-foreground hover:no-underline"
+            >
+              customer-churn
+            </a>
             .
           </p>
         </div>
@@ -156,7 +165,20 @@ export default function Projects() {
                           </button>
                         </div>
 
-                        {repo && (
+                        {project.projectMetrics && project.projectMetrics.length > 0 ? (
+                          <div className="space-y-2">
+                            <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-muted">
+                              Project metrics
+                            </p>
+                            <ul className="flex flex-wrap gap-3 text-xs text-muted">
+                              {project.projectMetrics.map((m, i) => (
+                                <li key={i} className="flex items-center gap-1.5">
+                                  {m}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ) : repo ? (
                           <div className="space-y-2">
                             <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-muted">
                               Repo metrics
@@ -177,7 +199,7 @@ export default function Projects() {
                               )}
                             </ul>
                           </div>
-                        )}
+                        ) : null}
 
                         {project.why && (
                           <div className="space-y-1.5">
