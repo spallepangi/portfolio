@@ -22,7 +22,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     company: 'Y Point Analytics',
-    role: 'Sr Data Analyst',
+    role: 'Sr Data Engineer',
     period: 'May 2018 — July 2021',
     location: 'Hyderabad, India',
     impact: [

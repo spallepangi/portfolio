@@ -60,6 +60,31 @@ export const projects: Project[] = [
     github: 'https://github.com/spallepangi/employee-attrition-ml-system'
   },
   {
+    title: 'Fraud Detection — End-to-End ML System',
+    description: 'End-to-end credit card fraud detection: XGBoost + AWS Lambda + API Gateway + DynamoDB + CloudWatch.',
+    summary:
+      'Built a fully deployed fraud detection system in 8 phases: raw CSV to a live REST API with real-time XGBoost scoring, DynamoDB persistence, SNS fraud alerts, and CloudWatch monitoring. Handles extreme class imbalance (0.17% fraud rate) via SMOTE and an Isolation Forest anomaly layer.',
+    why:
+      'Credit card fraud is rare but costly — a naive model that always predicts "no fraud" hits 99.83% accuracy yet catches nothing. This project tackles that with threshold tuning, SMOTE, and an anomaly detection signal layered on top of supervised classification, then deploys it as a production AWS pipeline.',
+    features: [
+      'XGBoost classifier with SMOTE + Isolation Forest anomaly layer for extreme imbalance (0.17% fraud rate)',
+      'AWS Lambda inference: cold-start model load from S3, per-request scoring, DynamoDB persistence',
+      'SNS email alerts on fraud detections; CloudWatch custom metrics, dashboard, and alarms',
+      'REST API via API Gateway (POST /score, GET /health); full 8-phase ML pipeline from data engineering to cloud ops'
+    ],
+    outcome: 'Live REST API for real-time fraud scoring with cloud monitoring, alerts, and DynamoDB audit trail.',
+    projectMetrics: [
+      'ROC-AUC 0.9718 (quality gate ≥ 0.95 ✓)',
+      'Precision 0.8387 (quality gate ≥ 0.80 ✓)',
+      'Recall 0.7324 (quality gate ≥ 0.70 ✓)',
+      'F1 0.7820 at threshold 0.95',
+      '284,807 transactions; 492 fraud cases (0.17% imbalance)',
+      'AWS stack: Lambda + API Gateway + S3 + DynamoDB + SNS + CloudWatch (~$0.94/month at 1k req/day)'
+    ],
+    tech: ['Python', 'XGBoost', 'SMOTE', 'AWS Lambda', 'API Gateway', 'DynamoDB', 'SNS', 'CloudWatch', 'S3'],
+    github: 'https://github.com/spallepangi/fraud-detection'
+  },
+  {
     title: 'Customer Churn Prediction',
     description: 'End-to-end ML solution for predicting customer churn in SaaS subscription services.',
     summary:

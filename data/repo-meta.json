@@ -10,5 +10,11 @@
     "pushed_at": "2026-03-11T06:09:17Z",
     "stargazers_count": 0,
     "updated_at": "2026-03-11T06:09:20Z"
+  },
+  "fraud-detection": {
+    "description": "End-to-end credit card fraud detection: XGBoost + AWS Lambda + API Gateway + DynamoDB + CloudWatch + Streamlit dashboard",
+    "pushed_at": "2026-04-05T15:23:28Z",
+    "stargazers_count": 0,
+    "updated_at": "2026-04-05T15:23:30Z"
   }
 }
